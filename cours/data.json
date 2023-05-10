@@ -1,0 +1,25 @@
+{
+    "editor.unicodeHighlight.allowedCharacters": {
+      "√": true,
+      "❄": true
+    },
+    "solidity.compileUsingRemoteVersion": "v0.5.0+commit.1d4f565a",
+    "explorer.confirmDelete": false,
+    "settingsSync.ignoredSettings": [],
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "editor.formatOnSave": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.iconTheme": "material-icon-theme",
+    "[html]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.openRepositoryInParentFolders": "always"
+  }
+  
