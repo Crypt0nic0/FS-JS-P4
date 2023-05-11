@@ -72,3 +72,23 @@ document.getElementById("formDelete").addEventListener("submit", () => {
     fetch('http://localhost:3000/posts/' + "1", del2)
         .then(() => console.log('data supprimée !'));
 });
+
+
+
+//=====================ASYNCHRONE=========================
+
+//---- Promise ----
+
+//fetch('monlien').then((res) => res..)
+// Le .then ne sera executé que lorsque l'on aura des données
+
+
+//---- Async/Await ----
+
+async function fetchData(){
+     await fetch('monlien')
+     // attend que le await soit executé avant de faire la suite...
+     await executeFonction();
+}
+
+ const fetchData2 = async () => {}
