@@ -92,3 +92,50 @@ async function fetchData(){
 }
 
  const fetchData2 = async () => {}
+
+
+
+ //=====================LE JSON=========================
+
+ // Méthode .json() => méthode qui s'auto-résout en royant le Body de la requête.
+
+ fetch('data.json')
+    .then((res) => res.json())
+    .then((data) => {
+        // Stringify => convertit en JSON
+        let settings = JSON.stringify(data);
+        // Parse => transforme JSON en objet JS
+        console.log(JSON.parse(settings));
+    });
+
+
+ //=====================WEB API=========================
+
+ //======CLIENT STORAGE
+ // Local Storage
+localStorage.data = "Je stock la data";
+console.log(localStorage.data);
+localStorage.removeItem("data");
+
+const obj = {
+    name: "Denis",
+    age: "22",
+};
+
+// Passer un objet ne fonctionne pas pour le localstorage
+// Il faut obligatoirement une chaine
+localStorage.user = obj; // => Ne fonctionne pas
+localStorage.user = JSON.stringify(obj); // => Fonctionne !
+
+
+ //======SESSION STORAGE
+ sessionStorage.dataSettings = "55px";
+ // Les données stockées dans le sessionStorage sont effacées lorsque l'ont quitte le nav
+
+
+
+ //======COOKIES
+ document.cookie = "username=CryptoNico";
+
+ // Bonne pratique
+ document.cookie = "pseudo=CN; path=/; max-age=450000; secure; samesite";
